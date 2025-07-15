@@ -1,11 +1,11 @@
-import { expect, Page } from '@playwright/test';
 import { HomePage } from '@inveniosoftware/invenio-e2e';
+import type { Locators } from '../locators';
 
 /**
  * Class representing extended home page with special footer.
  */
 
-export class ExtendedHomePage extends HomePage {
+export class ExtendedHomePage extends HomePage<Locators> {
 
     // VALIDATION
     /**

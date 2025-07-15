@@ -1,4 +1,4 @@
-# Invenio E2E tests for *Data repository*
+# Demo of Invenio E2E tests for TU Graz
 
 ## Installation (when `@inveniosoftware/invenio-e2e` goes public)
 

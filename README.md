@@ -1,8 +1,27 @@
 # Invenio E2E tests for *Data repository*
 
-## Installation
+## Installation (when `@inveniosoftware/invenio-e2e` goes public)
 
 ```bash
+npm install
+```
+
+## Current Installation
+
+```bash
+
+gh repo clone oarepo/invenio-e2e
+gh repo clone mesemus/tugraz-demo
+
+# this one is required for local installation of invenio-e2e
+export NODE_PRESERVE_SYMLINKS=1
+
+cd invenio-e2e
+npm install
+npm run build
+cd ..
+
+cd tugraz-demo
 npm install
 ```
 
@@ -20,7 +39,7 @@ The locators used in the tests can be customized by modifying the default ones p
 
 You need to customize the locators if you modified the UI templates of Invenio RDM in a way that the locators used in the tests do not match anymore.
 
-After modifications, you need to add these to the fixtures in the [`fixtures/index.ts`](./fixtures/index.ts) file, so that the tests can use them.
+After modifications, you need to add the locator to the fixtures in the [`fixtures/index.ts`](./fixtures/index.ts) file, so that the tests can use them.
 
 ### Running the default tests
 

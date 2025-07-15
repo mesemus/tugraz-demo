@@ -1,3 +1,4 @@
+import { Page } from '@playwright/test';
 import { HomePage } from '@inveniosoftware/invenio-e2e';
 import type { Locators } from '../locators';
 
@@ -6,6 +7,19 @@ import type { Locators } from '../locators';
  */
 
 export class ExtendedHomePage extends HomePage<Locators> {
+    protected translations: Record<string, string>;
+
+    constructor({ page, locators, availablePages, translations }: {
+        page: Page;
+        locators: Locators;
+        availablePages: {
+            [key: string]: object;
+        },
+        translations: Record<string, string>
+    }) {
+        super({ page, locators, availablePages });
+        this.translations = translations;
+    }
 
     // VALIDATION
     /**

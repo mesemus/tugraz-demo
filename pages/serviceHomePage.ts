@@ -6,14 +6,14 @@
  * details.
  */
 
-import { HomePage, type Services } from '@inveniosoftware/invenio-e2e';
+import { HomePage, type Services, type Locators } from '@inveniosoftware/invenio-e2e';
 
 import { Page } from '@playwright/test';
 
-export class ServiceHomePage extends HomePage {
+export class ServiceHomePage<L extends Locators = Locators> extends HomePage<L> {
   constructor({ page, locators, availablePages, services }: {
     page: Page,
-    locators: any,
+    locators: L,
     availablePages: { [key: string]: object },
     services: Services
   }) {

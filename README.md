@@ -3,7 +3,7 @@
 ## Installation (when `@inveniosoftware/invenio-e2e` goes public)
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Current Installation
@@ -13,22 +13,19 @@ npm install
 gh repo clone oarepo/invenio-e2e
 gh repo clone mesemus/tugraz-demo
 
-# this one is required for local installation of invenio-e2e
-export NODE_PRESERVE_SYMLINKS=1
-
 cd invenio-e2e
-npm install
-npm run build
+pnpm install
+pnpm run build
 cd ..
 
 cd tugraz-demo
-npm install
+pnpm install
 ```
 
 ## Running the tests
 
 ```bash
-npx playwright test
+pnpm exec playwright test
 ```
 
 ## Customizing the tests
@@ -43,7 +40,7 @@ After modifications, you need to add the locator to the fixtures in the [`fixtur
 
 ### Running the default tests
 
-To run the default tests provided by the `@inveniosoftware/invenio-e2e` package, just run the `npx playwright test` command as usual, no need to specify any test files.
+To run the default tests provided by the `@inveniosoftware/invenio-e2e` package, just run the `pnpm exec playwright test` command as usual, no need to specify any test files.
 
 ### Adding new tests
 
